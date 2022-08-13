@@ -99,8 +99,8 @@ class SinglePost extends Component {
                                 onError={i => (i.target.src = `${DefaultPost}`)}
                                 className="image "
                                 style={{
-                                    height: 'auto',
-                                    width: '50%',
+                                    height: '300px',
+                                    width: 'auto',
                                 }}
                                 />
                             </figure>
