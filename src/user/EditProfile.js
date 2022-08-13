@@ -58,6 +58,7 @@ class EditProfile extends Component {
       return false;
     }
     // email@domain.com
+    // eslint-disable-next-line no-useless-escape
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       this.setState({
         error: "A valid Email is required",
@@ -125,7 +126,7 @@ class EditProfile extends Component {
         <div className="field">
           <label className="label">Profile Photo</label>
           
-            {this.state.updatedProfilePicURL == "" ? <div class="file">
+            {this.state.updatedProfilePicURL === "" ? <div class="file">
               <label class="file-label">
                 <input className="file-input" type="file" name="resume" 
                   onChange={this.handleChange("photo")}
@@ -241,7 +242,7 @@ class EditProfile extends Component {
         <img
           style={{ height: "200px", width: "auto" }}
           className="image"
-          src={this.state.updatedProfilePicURL == "" ? photoUrl: this.state.updatedProfilePicURL }
+          src={this.state.updatedProfilePicURL === "" ? photoUrl: this.state.updatedProfilePicURL }
           onError={i => (i.target.src = `${DefaultProfile}`)}
           alt={name}
         />

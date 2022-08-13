@@ -15,7 +15,7 @@ import PrivateRoute from "./auth/PrivateRoute";
 import ForgotPassword from "./user/ForgotPassword";
 import ResetPassword from "./user/ResetPassword";
 import Admin from "./admin/Admin";
-import Footer from './core/Footer'
+
 
 
 const MainRouter = () => (

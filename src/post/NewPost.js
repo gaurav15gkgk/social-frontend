@@ -45,7 +45,7 @@ class NewPost extends Component {
         const value =
             name === "photo" ? event.target.files[0] : event.target.value;
         
-        if(name == "photo"){
+        if(name === "photo"){
             this.setState({postPicURL : URL.createObjectURL(value)})
         }
 
@@ -86,14 +86,14 @@ class NewPost extends Component {
     newPostForm = (title, body) => (
         <>
             <div className="field">
-                    {this.state.postPicURL != "" ?<img
+                    {this.state.postPicURL !== "" ?<img
                         style={{ height: "200px", width: "auto" }}
                         className="image"
                         src={this.state.postPicURL}
                         alt={"postImage"}
                     /> : null}
                 <label className="label">Post Photo</label>
-                {this.state.postPicURL == "" ?<div class="file">
+                {this.state.postPicURL === "" ?<div class="file">
                         <label class="file-label">
                             <input className="file-input" type="file" name="resume" 
                             onChange={this.handleChange("photo")}
@@ -146,7 +146,7 @@ class NewPost extends Component {
         const {
             title,
             body,
-            photo,
+         
             user,
             error,
             loading,

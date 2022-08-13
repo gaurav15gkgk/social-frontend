@@ -107,7 +107,7 @@ class EditPost extends Component {
         <>
             <div className="field mt-3">
                 <label className="label"> Change Post Photo</label>
-                {this.state.updatedPostPicURL == "" ?<div class="file">
+                {this.state.updatedPostPicURL === "" ?<div class="file">
                         <label class="file-label">
                             <input className="file-input" type="file" name="resume" 
                             onChange={this.handleChange("photo")}
@@ -190,7 +190,7 @@ class EditPost extends Component {
                 
                             <figure className ="image">
                                 <img
-                                src={this.state.updatedPostPicURL == "" ? photoUrl : this.state.updatedPostPicURL}
+                                src={this.state.updatedPostPicURL === "" ? photoUrl : this.state.updatedPostPicURL}
                                 alt={post.title}
                                 onError={i => (i.target.src = `${DefaultPost}`)}
                                 className="image "

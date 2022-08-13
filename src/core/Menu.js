@@ -17,7 +17,7 @@ const Menu = ({ history }) => (
                 <div className="level is-mobile">
                     <div className="level-right">
                         <div className="level-item ">
-                        <a role="button" class="navbar-burger" id="burger" data-target="navbarBasicExample" aria-label="menu" aria-expanded="false">
+                        <a role="button" class="navbar-burger" href id="burger" data-target="navbarBasicExample" aria-label="menu" aria-expanded="false">
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
