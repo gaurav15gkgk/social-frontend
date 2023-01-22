@@ -41,7 +41,7 @@ class Posts extends Component {
            <>
                 {posts.map((post, i) => {
                     const posterId = post.postedBy
-                        ? `/user/${post.postedBy._id}`
+                        ? `/user/${post.postedBy._id}?${new Date().getTime()}`
                         : "";
                     const posterName = post.postedBy
                         ? post.postedBy.name
